@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RoundData Domains Limited | Training, Advisory and Insights">
+  <title>{% block title %}RoundData Domains Limited{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="topline"><div class="container topinner"><span><i class="fa-solid fa-location-dot"></i> Golf Course Phase 2-230, Nairobi, Kenya</span><div><a href="mailto:info@rddl.com">info@rddl.com</a><span class="sep">|</span><a href="tel:+254797490039">+254 797 490 039</a></div></div></div>
+  <header class="navwrap" id="siteNav">
+    <div class="container nav">
+      <a class="brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/rounddata-logo.png') }}" alt="RoundData Domains Limited logo"><span><strong>ROUNDDATA</strong><small>DOMAINS LIMITED</small></span></a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="mainnav">
+        <a href="{{ url_for('home') }}">Home</a>
+        <div class="dropdown"><button>About <i class="fa-solid fa-chevron-down"></i></button><div class="dropmenu"><a href="{{ url_for('about') }}">Who We Are</a><a href="{{ url_for('about') }}#vision">Vision & Mission</a><a href="{{ url_for('about') }}#values">Core Values</a><a href="{{ url_for('about') }}#approach">Our Approach</a></div></div>
+        <div class="dropdown"><button>Services <i class="fa-solid fa-chevron-down"></i></button><div class="dropmenu"><a href="{{ url_for('services') }}">Training</a><a href="{{ url_for('services') }}#advisory">Advisory</a><a href="{{ url_for('services') }}#insights">Insights</a><a href="{{ url_for('services') }}#research">Research & Workshops</a></div></div>
+        <a href="{{ url_for('solutions') }}">Solutions</a>
+        <a href="{{ url_for('insights') }}">Insights</a>
+        <a class="navcta" href="{{ url_for('contact') }}">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>{% block content %}{% endblock %}</main>
+
+  <footer>
+    <div class="footergrid container">
+      <div class="footerbrand"><img src="{{ url_for('static', filename='images/rounddata-logo-light.png') }}" alt=""><h3>Building Confidence<br>in Every Byte</h3><p>Training • Advisory • Insights</p></div>
+      <div><h4>Explore</h4><a href="{{ url_for('about') }}">About RoundData</a><a href="{{ url_for('services') }}">Our Services</a><a href="{{ url_for('solutions') }}">Solutions</a><a href="{{ url_for('insights') }}">Insights</a></div>
+      <div><h4>Contact</h4><a href="tel:+254797490039">+254 797 490 039</a><a href="mailto:info@rddl.com">info@rddl.com</a><span>Golf Course Phase 2-230<br>Nairobi, Kenya</span></div>
+      <div><h4>Start a conversation</h4><p>Tell us what you are trying to improve and we can explore a practical starting point.</p><a class="footerbtn" href="{{ url_for('contact') }}">Send an enquiry <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+    <div class="container footbottom"><span>© {{ year }} RoundData Domains Limited</span><span>Training • Advisory • Insights</span></div>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/254797490039?text=Hello%20RoundData%20Domains%20Limited%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
